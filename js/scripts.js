@@ -11,18 +11,22 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
     var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0 && window.innerWidth > 992) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-            document.getElementById('logo').src = 'assets/img/logo_original.png';
-        } else {
-            
+
+
+        if (location.href.endsWith('index.html')) {
+            const navbarCollapsible = document.body.querySelector('#mainNav');
+            if (!navbarCollapsible) {
+                return;
+            }
+            if (window.scrollY === 0 && window.innerWidth > 992) {
+                navbarCollapsible.classList.remove('navbar-shrink')
+                document.getElementById('logo').src = 'assets/img/logo_original.png';
+            } 
+            else {
                 navbarCollapsible.classList.add('navbar-shrink')
                 document.getElementById('logo').src = 'assets/img/logo_white.png';
             }
+        }
 
 
     };

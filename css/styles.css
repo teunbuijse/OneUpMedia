@@ -248,7 +248,7 @@ sup {
 
 a {
   color: var(--bs-link-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
   color: var(--bs-link-hover-color);
@@ -3231,7 +3231,7 @@ textarea.form-control-lg {
   --bs-dropdown-link-hover-color: #1e2125;
   --bs-dropdown-link-hover-bg: #e9ecef;
   --bs-dropdown-link-active-color: #fff;
-  --bs-dropdown-link-active-bg: #ffc800;
+  --bs-dropdown-link-active-bg: #5b0a5b;
   --bs-dropdown-link-disabled-color: #adb5bd;
   --bs-dropdown-item-padding-x: 1rem;
   --bs-dropdown-item-padding-y: 0.25rem;
@@ -11256,14 +11256,11 @@ header.masthead .masthead-heading {
 }
 
 section#contact {
-  background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
+
   background-repeat: no-repeat;
   background-position: center;
 }
-section#contact .section-heading {
-  color: #fff;
-}
+
 section#contact form#contactForm .form-group {
   margin-bottom: 1.5rem;
 }
@@ -11378,4 +11375,54 @@ section#contact form#contactForm :-ms-input-placeholder {
   margin-bottom:30px;
   border: 3px solid black;
   border-radius: 10px;
+}
+
+button {
+  background-color: #8c538c;
+  border-radius: 30px;
+  border: 0px;
+  padding: 15px 20px;
+  font-weight: bold;
+  color: white;
+}
+
+#contact-home {
+  background-color: #630956;
+  color: white;
+  padding: 30px;
+}
+
+.heading-contact {
+  position: relative;
+  top: -100px;
+}
+
+#footer {
+  background-color: #773e6b;
+}
+
+#copyright {
+  background-color: #3b003d;
+
+}
+
+/* CSS to handle hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* remove the gap */
+}
+
+.dropdown-menu {
+  display: none; /* Ensure it's not displayed initially */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1; /* Show the dropdown */
+}
+
+#service .col {
+  padding: 0px;
 }
