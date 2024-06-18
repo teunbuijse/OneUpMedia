@@ -11394,7 +11394,12 @@ button {
 
 .heading-contact {
   position: relative;
-  top: -100px;
+  top: -75px;
+}
+
+
+#pijl-contact {
+  width: 200px;
 }
 
 #footer {
