@@ -11428,6 +11428,19 @@ button {
   opacity: 1; /* Show the dropdown */
 }
 
+
+#service .row {
+  height: 500px;
+}
+
 #service .col {
   padding: 0px;
+}
+
+.gradient {
+  position: absoulute;
+  top:0; left:0;
+  background-color: black;
+  height: 100%;
+  width: 100%;
 }
