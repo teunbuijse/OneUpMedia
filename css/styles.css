@@ -11372,9 +11372,8 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .review {
-  margin-bottom:30px;
-  border: 3px solid black;
-  border-radius: 10px;
+  margin-bottom:10px;
+
 }
 
 button {
@@ -11384,6 +11383,7 @@ button {
   padding: 15px 20px;
   font-weight: bold;
   color: white;
+  margin-top: 10px;
 }
 
 #contact-home {
@@ -11443,4 +11443,74 @@ button {
   background-color: black;
   height: 100%;
   width: 100%;
+}
+
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(33.33%);
+  }
+
+  .carousel-inner .carousel-item-start.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-33.33%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+
+.card {
+  padding: 80px 20px 100px;
+  margin: 10px;
+  background-image: url(/assets/img/review-bg.svg);
+}
+
+
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+  position: relative;
+  left: -100px;
+ }
+ 
+ .carousel-control-next-icon {
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+   position: relative;
+   left: 100px;
+ }
+
+
+.fa-quote-left {
+  height: 50px;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+
+.review-logo {
+  width: 40%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
