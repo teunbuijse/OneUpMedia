@@ -1,12 +1,3 @@
-/*!
-* Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -73,7 +64,25 @@ window.addEventListener('DOMContentLoaded', event => {
         let cloneChild = next.cloneNode(true)
         el.appendChild(cloneChild.children[0])
         next = next.nextElementSibling
-    }
-})
+        }
+    });
+
+
+    var monitor = setInterval(function(){
+        var elem = document.activeElement;
+        if(elem && elem.tagName == 'IFRAME'){
+            clearInterval(monitor);
+            overlay = document.getElementById('overlay')
+            overlay.classList.add('d-none')
+
+        }
+    }, 100);
+
+
+
+
+
+
+    
 
 });

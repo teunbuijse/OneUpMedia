@@ -681,8 +681,6 @@ progress {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -10834,17 +10832,7 @@ p {
   line-height: 1.75;
 }
 
-.page-section {
-  padding: 6rem 0;
-}
 
-#footer.page-section {
-  padding: 6rem;
-}
-
-#contact.page-section {
-  padding-bottom: 0;
-}
 
 
 
@@ -10866,6 +10854,14 @@ p {
     padding: 9rem 0;
   }
 }
+
+@media (min-width: 768px) {
+  section#contact, section#service {
+    padding: 0;
+  }
+}
+
+
 .btn-xl {
   padding: 1.25rem 2.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -11266,11 +11262,11 @@ header.masthead .masthead-heading {
   height: 2.75rem;
 }
 
-section#contact {
+section#contact, section#service {
 
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 74.83px;
+  padding-top: 74.17px;
 }
 
 section#contact form#contactForm .form-group {
@@ -11353,30 +11349,6 @@ section#contact form#contactForm :-ms-input-placeholder {
   height: 300px;
 }
 
-/* .scroll-widget {
-  overflow: hidden;
-} */
-
-/* .scroll-container {
-  white-space: nowrap;
-  animation: scroll 5s linear infinite;
-} */
-
-.scroll-item {
-  display: inline-block;
-  margin-right: 50px;
-}
-
-/* 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-} */
-
 .slider {
   padding: 150px 0;
   background-image: url(../assets/img/background-slider.png);
@@ -11440,22 +11412,25 @@ button {
   opacity: 1; /* Show the dropdown */
 }
 
-
-#service .row {
-  height: 500px;
-}
-
 #service .col {
   padding: 0px;
+  height: 600px;
 }
 
-.gradient {
-  position: absoulute;
-  top:0; left:0;
-  background-color: black;
-  height: 100%;
-  width: 100%;
+@media (min-width: 767px) {
+  .gradient {
+    background: rgb(89,83,140);
+    background: linear-gradient(90deg, rgba(89,83,140,0) 0%, rgba(255,255,255,1) 100%);
+  }
 }
+
+#overlay {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
+
 
 
 @media (max-width: 767px) {
@@ -11537,10 +11512,10 @@ button {
 
 
 .scroll-container {
-
-
   overflow: hidden;
 }
+
+
 
 .carousel-primary,
 .carousel-secondary {
@@ -11552,11 +11527,6 @@ button {
   top: 0;
 }
 
-.carousel-primary img {
-  height: 100px;
-  border-radius: 10px;
-  margin: 0 100px;
-}
 
 .carousel-primary {
   display: flex;
@@ -11594,3 +11564,7 @@ button {
 }
 
 
+.grid {
+  display: grid;
+  grid-auto-rows: 1fr;
+}
