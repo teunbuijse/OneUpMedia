@@ -11332,9 +11332,10 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .service {
   background-image: url(../assets/img/dienst-mockup.png);
-  padding: 100px;
   color: rgba(255, 255, 255, 0.50);
   transition: transform 1s ease, color 1s ease;
+  padding: 100px;
+
 }
 
 .service:hover {
@@ -11510,7 +11511,7 @@ button {
 }
 
 .review-logo {
-  width: 40%;
+  height: 15%;
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -11567,10 +11568,4 @@ button {
 
 #contact .col {
   padding: 80px;
-}
-
-
-.grid {
-  display: grid;
-  grid-auto-rows: 1fr;
 }
