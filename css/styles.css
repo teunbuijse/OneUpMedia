@@ -11412,9 +11412,8 @@ button {
   opacity: 1; /* Show the dropdown */
 }
 
-#service .col {
+#service .col-md-6 {
   padding: 0px;
-  height: 600px;
 }
 
 @media (min-width: 767px) {
@@ -11426,12 +11425,19 @@ button {
 
 #overlay {
   position: absolute;
+  top: 0;
   width: 100%;
+  height: 100%;
   pointer-events: none;
 }
 
+.container-gradient {
+  position: relative;
+}
 
-
+#service .service-text {
+  padding: 30px;
+}
 
 @media (max-width: 767px) {
   .carousel-inner .carousel-item > div {
