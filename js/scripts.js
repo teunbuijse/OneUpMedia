@@ -3,8 +3,8 @@ window.addEventListener('DOMContentLoaded', event => {
     // Navbar shrink function
     var navbarShrink = function () {
 
-
-        if (location.href.endsWith('index.html')) {
+       
+        if (location.href.includes('index.html')) {
             const navbarCollapsible = document.body.querySelector('#mainNav');
             if (!navbarCollapsible) {
                 return;
@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
+
 
     //  Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
@@ -56,7 +57,7 @@ window.addEventListener('DOMContentLoaded', event => {
 		items.forEach((el) => {
 			const minPerSlide = 3
 			let next = el.nextElementSibling
-			for (var i=1; i<minPerSlide; i++) {
+			for (var i=0; i<minPerSlide; i++) {
 				if (!next) {
             // wrap carousel by using first child
             next = items[0]
@@ -67,18 +68,7 @@ window.addEventListener('DOMContentLoaded', event => {
         }
     });
 
-
-    var monitor = setInterval(function(){
-        var elem = document.activeElement;
-        if(elem && elem.tagName == 'IFRAME'){
-            clearInterval(monitor);
-            overlay = document.getElementById('overlay')
-            overlay.classList.add('d-none')
-
-        }
-    }, 100);
-
-
+    
 
 
 
