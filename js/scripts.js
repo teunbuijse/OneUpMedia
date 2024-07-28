@@ -2,8 +2,6 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
     var navbarShrink = function () {
-
-       
         if (location.href.includes('index.html')) {
             const navbarCollapsible = document.body.querySelector('#mainNav');
             if (!navbarCollapsible) {
@@ -12,14 +10,12 @@ window.addEventListener('DOMContentLoaded', event => {
             if (window.scrollY === 0 && window.innerWidth > 992) {
                 navbarCollapsible.classList.remove('navbar-shrink')
                 document.getElementById('logo').src = 'assets/img/logo_original.png';
-            } 
+            }
             else {
                 navbarCollapsible.classList.add('navbar-shrink')
                 document.getElementById('logo').src = 'assets/img/logo_white.png';
             }
         }
-
-
     };
 
     // Shrink the navbar 
@@ -67,6 +63,16 @@ window.addEventListener('DOMContentLoaded', event => {
         next = next.nextElementSibling
         }
     });
+
+    var monitor = setInterval(function(){
+        var elem = document.activeElement;
+        if(elem && elem.tagName == 'IFRAME'){
+            clearInterval(monitor);
+            overlay = document.getElementById('overlay')
+            overlay.classList.add('d-none')
+
+        }
+    }, 100);
 
     
 

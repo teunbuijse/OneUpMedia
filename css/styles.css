@@ -11334,6 +11334,11 @@ section#contact form#contactForm :-ms-input-placeholder {
   top: -70px;
 }
 
+.heading-service {
+  position: relative;
+  top: -60px;
+}
+
 .service {
   color: rgba(255, 255, 255, 0.50);
   transition: transform 1s ease, color 1s ease;
@@ -11446,11 +11451,10 @@ button {
   padding: 0px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .gradient {
-    background: rgb(89,83,140);
-    background: linear-gradient(90deg, rgba(89,83,140,0) 0%, rgba(255,255,255,1) 100%);
-  }
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 25%, rgba(255,255,255,1) 100%);  }
 }
 
 #overlay {
@@ -11649,3 +11653,11 @@ button {
 .services:has(.gray-gradient4:hover) .service4  {transform: scale(1.1); }
 .services:has(.gray-gradient5:hover) .service5  {transform: scale(1.1); }
 .services:has(.gray-gradient6:hover) .service6  {transform: scale(1.1); }
+
+
+
+@media (max-width: 768px) {
+  iframe {
+    height: 400px;
+  }
+}
