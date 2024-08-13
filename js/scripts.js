@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', event => {
     let items = document.querySelectorAll('.carousel .carousel-item')
 
 		items.forEach((el) => {
-			const minPerSlide = 3
+			const minPerSlide = 2
 			let next = el.nextElementSibling
 			for (var i=0; i<minPerSlide; i++) {
 				if (!next) {
@@ -63,6 +63,9 @@ window.addEventListener('DOMContentLoaded', event => {
         next = next.nextElementSibling
         }
     });
+
+
+
 
     var monitor = setInterval(function(){
         var elem = document.activeElement;

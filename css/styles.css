@@ -1993,7 +1993,7 @@ progress {
 .form-control {
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
+  padding: 1rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2847,7 +2847,7 @@ textarea.form-control-lg {
   --bs-btn-color: #fff;
   --bs-btn-bg: var(--bs-tertiary);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-bg: #7c3b7c;
   --bs-btn-focus-shadow-rgb: 255, 208, 38;
   --bs-btn-active-bg: var(--bs-primary);
   --bs-btn-disabled-color: #fff;
@@ -3820,6 +3820,8 @@ textarea.form-control-lg {
   border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
   border-radius: var(--bs-navbar-toggler-border-radius);
   transition: var(--bs-navbar-toggler-transition);
+  margin: 0;
+
 }
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
@@ -10839,8 +10841,9 @@ p {
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 2.5rem;
   margin-top: 0;
-  margin-bottom: 1rem;
+
 }
+
 .page-section h3.section-subheading, .page-section .section-subheading.h3 {
   font-size: 1rem;
   font-weight: 400;
@@ -10882,7 +10885,7 @@ p {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: var(--bs-primary);
+  background-color: #3b003d;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -10930,7 +10933,7 @@ p {
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: var(--bs-primary);
+    background-color: #3b003d;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -11266,19 +11269,11 @@ section#contact, section#service {
 
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 74.17px;
-}
-
-section#portfolio, section#about {
-  padding-top: 100px;
+  padding-top: 72px;
 }
 
 section#contact form#contactForm .form-group {
-  margin-bottom: 1.5rem;
-}
-section#contact form#contactForm .form-group input,
-section#contact form#contactForm .form-group textarea {
-  padding: 1.25rem;
+  margin-bottom: 1rem;
 }
 section#contact form#contactForm .form-group input.form-control {
   height: auto;
@@ -11329,9 +11324,13 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 
 
-.heading {
+.row-heading {
   position: relative;
-  top: -70px;
+}
+
+.col-heading {
+  position: absolute;
+  top: 30px;
 }
 
 .heading-service {
@@ -11372,20 +11371,23 @@ section#contact form#contactForm :-ms-input-placeholder {
   background-image: url(../assets/img/diensten/Social_media_content.png);
 }
 
+.service7 {
+  background-image: url(../assets/img/diensten/Vacaturevideo.png);
+}
+
+.service8 {
+  background-image: url(../assets/img/diensten/Documentaire.png);
+}
+
 .service:hover {
   color: rgba(255, 255, 255, 1);
   transform: scale(1.1);
 }
 
-#arrow-big {
-  position: absolute;
-  left: 200px;
-  opacity: 20%;
-  height: 300px;
-}
-
 .slider {
-  padding: 150px 0;
+  padding-top: 150px;
+  padding-bottom: 150px;
+
   background-image: url(../assets/img/background-slider.png);
   background-size: cover;
 }
@@ -11470,10 +11472,10 @@ button {
 }
 
 #service .service-text {
-  padding: 30px;
+  padding: 0 30px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .carousel-inner .carousel-item > div {
     display: none;
   }
@@ -11489,16 +11491,23 @@ button {
 }
 
 /* medium and up screens */
-@media (min-width: 768px) {
+@media (min-width: 992px) {
+  .carousel-inner .carousel-item,
+  .carousel-inner .carousel-item-end,
+  .carousel-inner .carousel-item-start,
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    transition: transform 0s ease; /* Smooth transition for transform */
+  }
 
   .carousel-inner .carousel-item-end.active,
   .carousel-inner .carousel-item-next {
-    transform: translateX(33.33%);
+    transform: translateX(25%);
   }
 
   .carousel-inner .carousel-item-start.active, 
   .carousel-inner .carousel-item-prev {
-    transform: translateX(-33.33%);
+    transform: translateX(-25%);
   }
 }
 
@@ -11507,12 +11516,37 @@ button {
   transform: translateX(0);
 }
 
+
 .card {
   padding: 80px 20px 100px;
   margin: 10px;
   background-image: url(../assets/img/review-bg.svg);
+  background-size: cover;
 }
 
+
+.review-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+@media (max-width: 991px) {
+  .review-logo {
+    width: 30%;
+
+  }
+  
+
+}
+
+@media (min-width: 992px) {
+  .review-logo {
+    width: 40%;
+
+  }
+
+}
 
 
 .carousel-control-prev-icon {
@@ -11543,12 +11577,7 @@ button {
   top: 20px;
 }
 
-.review-logo {
-  height: 10%;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
+
 
 
 .scroll-container {
@@ -11606,13 +11635,14 @@ button {
 @media (max-width: 768px) {
   .page-section {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
 
 @media (max-width: 992px) {
   .masthead {
-    margin-top: 79.7px;
+    margin-top: 72px;
   }
 }
 
@@ -11629,9 +11659,8 @@ button {
 
 }
 
-.gray-gradient1, .gray-gradient2, .gray-gradient3, .gray-gradient4, .gray-gradient5, .gray-gradient6 {
+.gray-gradient1, .gray-gradient2, .gray-gradient3, .gray-gradient4, .gray-gradient5, .gray-gradient6, .gray-gradient7, .gray-gradient8 {
   background-color: rgba(0, 0, 0, 25%);
-  height: 100%;
 }
 
 .services {
@@ -11653,6 +11682,8 @@ button {
 .services:has(.gray-gradient4:hover) .service4  {transform: scale(1.1); }
 .services:has(.gray-gradient5:hover) .service5  {transform: scale(1.1); }
 .services:has(.gray-gradient6:hover) .service6  {transform: scale(1.1); }
+.services:has(.gray-gradient7:hover) .service7  {transform: scale(1.1); }
+.services:has(.gray-gradient8:hover) .service8  {transform: scale(1.1); }
 
 
 
@@ -11660,4 +11691,60 @@ button {
   iframe {
     height: 400px;
   }
+}
+
+.contact-info {
+  border-radius: 20px;
+}
+
+#arrow-big {
+  position: absolute;
+  left: 200px;
+  opacity: 20%;
+  height: 300px;
+}
+
+.btn-secondary {
+    background-color: #8c538c;
+    border-radius: 30px;
+    border: 0px;
+    padding: 15px 20px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+
+}
+
+body {
+	align-items: center;
+	justify-content: center;
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-300px * 9))}
+}
+
+.slider {
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: auto;
+	
+	.slide-track {
+		animation: scroll 20s linear infinite;
+		display: flex;
+		width: calc(300px * 18);
+    
+	}
+
+  .slide-track:hover {
+      animation-play-state: paused;
+  }
+  
+	.slide {
+		width: 250px;
+    margin-right: 50px;
+    align-content: center;
+	}
 }
