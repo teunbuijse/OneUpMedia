@@ -10859,8 +10859,8 @@ p {
 }
 
 @media (min-width: 768px) {
-  section#contact, section#service {
-    padding: 0;
+  section#contact, section#about, section#portfolio {
+    margin-top: 50px;
   }
 }
 
@@ -11265,11 +11265,9 @@ header.masthead .masthead-heading {
   height: 2.75rem;
 }
 
-section#contact, section#service {
-
-  background-repeat: no-repeat;
-  background-position: center;
+section#service {
   padding-top: 72px;
+  padding-bottom: 0;
 }
 
 section#contact form#contactForm .form-group {
@@ -11741,7 +11739,7 @@ body {
   .slide-track:hover {
       animation-play-state: paused;
   }
-  
+
 	.slide {
 		width: 250px;
     margin-right: 50px;
