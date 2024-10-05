@@ -2248,9 +2248,9 @@ textarea.form-control-lg {
   filter: brightness(90%);
 }
 .form-check-input:focus {
-  border-color: #ffe480;
+  border-color: #000000;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(255, 200, 0, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
 }
 .form-check-input:checked {
   background-color: #ffc800;
@@ -11719,7 +11719,7 @@ body {
 
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-300px * 9))}
+	100% { transform: translateX(calc(-300px * 10))}
 }
 
 .slider {
@@ -11731,7 +11731,7 @@ body {
 	.slide-track {
 		animation: scroll 20s linear infinite;
 		display: flex;
-		width: calc(300px * 18);
+		width: calc(300px * 20);
     
 	}
 
@@ -11770,5 +11770,6 @@ iframe {
 
 
 
-
-
+textarea:focus {
+  border-color: black
+}
