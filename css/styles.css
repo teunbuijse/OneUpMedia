@@ -11773,3 +11773,43 @@ iframe {
 textarea:focus {
   border-color: black
 }
+
+
+.bg-gradient-purple {
+  background: rgb(91,10,91);
+  background: linear-gradient(90deg, rgba(91,10,91,0.4963235294117647) 0%, rgba(91,10,91,1) 100%);
+}
+
+
+#david {
+  position: absolute;
+  border-radius: 50px;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20%;
+  
+
+}
+
+
+
+.over-david {
+  position: relative;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  #david {
+    display: none;
+  }
+  #over-arrow {
+    display: none;
+  }
+
+}
