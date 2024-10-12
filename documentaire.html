@@ -53,30 +53,54 @@
             </div>
         </nav>
 
+
         <section class="page-section" id="service">
             <div class="container-fluid container-gradient">
                 <div class="row">
-                  <div class="col-md-6">
-                    <iframe height="100%" width="100%" src="https://www.youtube.com/embed/xJoZrKhJPPw?si=bBiJbNM3diF-F1JA"></iframe>
-
-                  </div>
-                  <div class="col-md-6 service-text mt-5 mb-5">
-                    <div class="text-center">
-                        <img src="assets/img/pijl-titel.png" width="150px" alt="">
-                        <h3 class="heading-service section-heading text-uppercase">DOCUMENTAIRE.</h3>
+                    <div class="col-md-6">
+                        
+                        <iframe id="video" height="100%" width="100%" src="https://www.youtube.com/embed/xJoZrKhJPPw?si=bBiJbNM3diF-F1JA"></iframe>
+                        <div id='video-cover' style="background-image: url(assets/img/diensten/Documentaire.png); position: relative; cursor: pointer;">
+                            
+                            <!-- Optional Play Button Overlay -->
+                        </div>
+                    </div>
+                    <div class="col-md-6 service-text mt-5 mb-5">
+                        <div class="text-center">
+                            <img src="assets/img/pijl-titel.png" width="150px" alt="">
+                            <h3 class="heading-service section-heading text-uppercase">DOCUMENTAIRE.</h3>
                         <p>Sommige verhalen laten zich niet in een minuut vertellen. Video is een prachtig middel om ook op de diepgaande, intensere onderwerpen in te gaan.</p>
                         <p>We vinden het geweldig om de lagen van complexe onderwerpen te onderzoeken en de verhalen van mensen te belichten. Met documentaires kunnen we niet alleen informeren, maar ook inspireren, de emoties opzoeken en zo verder gaan dan de oppervlakte.</p>
                         <p>In het voorbeeld hiernaast de teaser van “De weg naar Parijs” waarin David (ikzelf!) je meeneemt in alle stappen die komen kijken met het lopen van een eerste marathon: de doorbraken, tegenslagen, twijfels, frustrerende én euforische momenten die komen kijken bij het halen van die felbegeerde eindstreep.</p>
                         <button>Meer Diensten</button>
+                        </div>
                     </div>
-                  </div>
                 </div>
                 <div id="overlay" class="row">
-                  <div class="col-md-6 gradient"></div>
-                  <div class="col-md-6"></div>
+                    <div class="col-md-6 gradient">
+                        <img id="play-button" src="assets/img/diensten/Playbutton.png" height="100px" alt="Play Button" style="position: absolute; top: 50%; left: 25%; transform: translate(-50%, -50%);">
+
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- JavaScript to handle the video cover click -->
+        <script>
+            document.getElementById('video-cover').addEventListener('click', function() {
+                var videoContainer = document.getElementById('video-cover');
+                videoContainer.innerHTML = '<iframe height="100%" width="100%" src="https://www.youtube.com/embed/xJoZrKhJPPw?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+                var playButton = document.getElementById('play-button');
+                playButton.style.display = 'none';
+                var overlay = document.getElementById('overlay')
+                overlay.style.display = 'none';
+            });
+        </script>
+
+        
 
         <!-- CONTACT -->
         <section class="page-section" id="contact-home">

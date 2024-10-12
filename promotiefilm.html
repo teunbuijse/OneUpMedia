@@ -57,8 +57,10 @@
             <div class="container-fluid container-gradient">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="video-container" style="position: relative; cursor: pointer;">
-                            <img id="video-cover" src="assets/img/diensten/Promotiefilm.png" alt="Video Cover Image" style="width: 100%; height: 100%;">
+                        
+                        <iframe id="video" height="100%" width="100%" src="https://www.youtube.com/embed/PpgDPBOi7i8?si=bBiJbNM3diF-F1JA"></iframe>
+                        <div id='video-cover' style="background-image: url(assets/img/diensten/Promotiefilm.png); position: relative; cursor: pointer;">
+                            
                             <!-- Optional Play Button Overlay -->
                         </div>
                     </div>
@@ -73,7 +75,7 @@
                 </div>
                 <div id="overlay" class="row">
                     <div class="col-md-6 gradient">
-                        <img id="play-button" src="assets/img/diensten/Playbutton.png" height="30%" alt="Play Button" style="position: absolute; top: 50%; left: 25%; transform: translate(-50%, -50%);">
+                        <img id="play-button" src="assets/img/diensten/Playbutton.png" height="100px" alt="Play Button" style="position: absolute; top: 50%; left: 25%; transform: translate(-50%, -50%);">
 
                     </div>
                     <div class="col-md-6">
@@ -82,20 +84,20 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- JavaScript to handle the video cover click -->
         <script>
             document.getElementById('video-cover').addEventListener('click', function() {
-                var videoContainer = document.querySelector('.video-container');
+                var videoContainer = document.getElementById('video-cover');
                 videoContainer.innerHTML = '<iframe height="100%" width="100%" src="https://www.youtube.com/embed/PpgDPBOi7i8?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
-            });
-            document.getElementById('play-button').addEventListener('click', function(event) {
-                var videoContainer = document.querySelector('.video-container');
-                videoContainer.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/PpgDPBOi7i8?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+                var playButton = document.getElementById('play-button');
+                playButton.style.display = 'none';
+                var overlay = document.getElementById('overlay')
+                overlay.style.display = 'none';
             });
         </script>
-        
 
+        
         <!-- CONTACT -->
         <section class="page-section" id="contact-home">
             <div class="container">

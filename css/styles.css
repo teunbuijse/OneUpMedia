@@ -11341,8 +11341,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   transition: transform 1s ease, color 1s ease;
   padding: 125px 0;
   background-size: cover;
-
-
+  background-position: center;
 }
 
 .service1 {
@@ -11811,5 +11810,30 @@ textarea:focus {
   #over-arrow {
     display: none;
   }
+
+}
+
+
+#video-cover {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  #video {
+    display: none;
+  }
+
+}
+
+@media (max-width: 768px) {
+  #video-cover {
+    display: none;
+  }
+  #play-button {
+    display: none;
+  }
+
 
 }
