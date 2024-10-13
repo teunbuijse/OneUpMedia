@@ -61,10 +61,11 @@
                 <div class="row">
                     <div class="col-md-6">
                         
-                        <iframe id="video" height="100%" width="100%" src="https://www.youtube.com/embed/R4s0dL4znm8?si=bBiJbNM3diF-F1JA"></iframe>
                         <div id='video-cover' style="background-image: url(assets/img/diensten/Bedrijfsfilm.png); position: relative; cursor: pointer;">
                             
                             <!-- Optional Play Button Overlay -->
+                            <img id="play-button" src="assets/img/diensten/Playbutton.png" height="100px" alt="Play Button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+
                         </div>
                     </div>
                     <div class="col-md-6 service-text mt-5 mb-5">
@@ -79,7 +80,6 @@
                 </div>
                 <div id="overlay" class="row">
                     <div class="col-md-6 gradient">
-                        <img id="play-button" src="assets/img/diensten/Playbutton.png" height="100px" alt="Play Button" style="position: absolute; top: 50%; left: 25%; transform: translate(-50%, -50%);">
 
                     </div>
                     <div class="col-md-6">
@@ -114,12 +114,13 @@
         <!-- JavaScript to handle the video cover click -->
         <script>
             document.getElementById('video-cover').addEventListener('click', function() {
+                var overlay = document.getElementById('overlay')
+                overlay.style.display = 'none'
                 var videoContainer = document.getElementById('video-cover');
                 videoContainer.innerHTML = '<iframe height="100%" width="100%" src="https://www.youtube.com/embed/R4s0dL4znm8?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
                 var playButton = document.getElementById('play-button');
                 playButton.style.display = 'none';
-                var overlay = document.getElementById('overlay')
-                overlay.style.display = 'none';
+
             });
         </script>
 

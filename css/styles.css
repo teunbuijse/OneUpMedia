@@ -11814,6 +11814,12 @@ textarea:focus {
 }
 
 
+.portfolio-modal #video-cover {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
 #video-cover {
   height: 100%;
   background-size: cover;
