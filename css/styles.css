@@ -11406,7 +11406,7 @@ button {
 #contact-home {
   background-color: #630956;
   color: white;
-  padding: 30px;
+
 }
 
 .heading-contact {
@@ -11630,7 +11630,7 @@ button {
 
 @media (max-width: 768px) {
   .page-section {
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 50px;
   }
 }
@@ -11829,11 +11829,13 @@ textarea:focus {
 
 @media (max-width: 768px) {
   #video-cover {
-    display: none;
-  }
-  #play-button {
-    display: none;
+    height: 400px;
   }
 
 
+
+}
+
+#contact-home .col-md-6, .col-md-12 {
+  height: 120px;
 }

@@ -67,15 +67,6 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
 
-    var monitor = setInterval(function(){
-        var elem = document.activeElement;
-        if(elem && elem.tagName == 'IFRAME'){
-            clearInterval(monitor);
-            overlay = document.getElementById('overlay')
-            overlay.classList.add('d-none')
-
-        }
-    }, 100);
 
     
 

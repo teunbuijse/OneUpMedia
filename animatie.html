@@ -59,10 +59,11 @@
                 <div class="row">
                     <div class="col-md-6">
                         
-                        <iframe id="video" height="100%" width="100%" src="https://www.youtube.com/embed/bkAMBwliBLg?si=bBiJbNM3diF-F1JA"></iframe>
                         <div id='video-cover' style="background-image: url(assets/img/diensten/Animatie.png); position: relative; cursor: pointer;">
                             
                             <!-- Optional Play Button Overlay -->
+                            <img id="play-button" src="assets/img/diensten/Playbutton.png" height="100px" alt="Play Button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+
                         </div>
                     </div>
                     <div class="col-md-6 service-text mt-5 mb-5">
@@ -77,7 +78,6 @@
                 </div>
                 <div id="overlay" class="row">
                     <div class="col-md-6 gradient">
-                        <img id="play-button" src="assets/img/diensten/Playbutton.png" height="100px" alt="Play Button" style="position: absolute; top: 50%; left: 25%; transform: translate(-50%, -50%);">
 
                     </div>
                     <div class="col-md-6">
@@ -85,17 +85,56 @@
                     </div>
                 </div>
             </div>
+            
+        </section>
+
+
+        <section>
+            <div class="container services">
+                <div class="row text-center justify-content-around mb-2">
+                    <a href="./video_met_impact.html" class="col-md service service5 m-2">
+                        <h4>VIDEO MET IMPACT.</h4>
+                    </a>
+                    <a href="./social_media_content.html" class="col-md service service6 m-2">
+                        <h4>SOCIAL MEDIA CONTENT.</h4>
+                    </a>
+
+
+                </div>
+                
+                <div class="row text-center justify-content-around mb-2 gradient-overlay">
+                    <a href="./video_met_impact.html" class="col-md service gray-gradient5 m-2 ">
+                        <h4>VIDEO MET IMPACT.</h4>
+                    </a>
+                    <a href="./social_media_content.html" class="col-md service gray-gradient6 m-2 ">
+                        <h4>SOCIAL MEDIA CONTENT.</h4>
+                    </a>
+
+
+                </div>
+            </div>
         </section>
 
         <!-- JavaScript to handle the video cover click -->
         <script>
             document.getElementById('video-cover').addEventListener('click', function() {
+                var overlay = document.getElementById('overlay')
+                overlay.style.display = 'none'
+                
                 var videoContainer = document.getElementById('video-cover');
                 videoContainer.innerHTML = '<iframe height="100%" width="100%" src="https://www.youtube.com/embed/bkAMBwliBLg?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
                 var playButton = document.getElementById('play-button');
                 playButton.style.display = 'none';
+                
+
+            });
+            document.getElementById('play-button').addEventListener('click', function() {
                 var overlay = document.getElementById('overlay')
-                overlay.style.display = 'none';
+                overlay.style.display = 'none'
+                var videoContainer = document.getElementById('video-cover');
+                videoContainer.innerHTML = '<iframe height="100%" width="100%" src="https://www.youtube.com/embed/bkAMBwliBLg?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+                var playButton = document.getElementById('play-button');
+                playButton.style.display = 'none';
             });
         </script>
 
@@ -106,17 +145,17 @@
         <section class="page-section" id="contact-home">
             <div class="container">
                 <div class="row text-center">
-                    <div class="col-12">
+                    <div class="col-md-12">
                         <img id="pijl-contact" src="assets/img/arrow-contact.svg" alt="">
                         <h4 class="heading-contact">OOK MET ONS SAMENWERKEN?</h2>
 
                     </div>
-                    <div class="col">
+                    <div class="col-md-6">
                         <img id="pijl-contact" src="assets/img/arrow-contact.svg" alt="">
                         <h4 class="heading-contact"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i> info@oneupmedia.nl</h2>
                         
                     </div>
-                    <div class="col">
+                    <div class="col-md-6">
                         <img id="pijl-contact" src="assets/img/arrow-contact.svg" alt="">
                         <h4 class="heading-contact"><i class="fa-solid fa-phone" style="color: #ffffff;"></i> 06-24332702</h2>
                         
