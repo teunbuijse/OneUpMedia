@@ -2807,7 +2807,7 @@ textarea.form-control-lg {
 }
 .btn:hover {
   color: var(--bs-btn-hover-color);
-  background-color: var(--bs-btn-hover-bg);
+  background-color: #722167;
   border-color: var(--bs-btn-hover-border-color);
 }
 .btn-check + .btn:hover {
@@ -11382,7 +11382,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .slider {
-  padding: 100px 0;
+  padding: 120px 0;
 
   background-image: url(../assets/img/background-slider.png);
   background-size: cover;
