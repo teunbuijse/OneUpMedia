@@ -10847,7 +10847,7 @@ p {
 .page-section h3.section-subheading, .page-section .section-subheading.h3 {
   font-size: 1rem;
   font-weight: 400;
-  font-style: italic;
+  font-weight: bold;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin-bottom: 1rem;
 }
@@ -11695,6 +11695,7 @@ button {
 
 .contact-info {
   border-radius: 20px;
+  
 }
 
 #arrow-big {
@@ -11785,8 +11786,7 @@ textarea:focus {
 
 
 .bg-gradient-purple {
-  background: rgb(91,10,91);
-  background: linear-gradient(90deg, rgba(91,10,91,0.4963235294117647) 0%, rgba(91,10,91,1) 100%);
+  background: linear-gradient(90deg, rgba(91,10,91,1) 0%, rgba(91,10,91,0.4963235294117647) 100%);
 }
 
 
@@ -11854,4 +11854,21 @@ textarea:focus {
 
 #contact-home .col-md-6, .col-md-12 {
   height: 120px;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-item .content {
+  flex-grow: 1;
 }
