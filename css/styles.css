@@ -11357,7 +11357,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .service4 {
-  background-image: url(../assets/img/diensten/Animatie.png);
+  background-image: url(../assets/img/diensten/Animatie2.png);
 }
 
 .service5 {
@@ -11374,6 +11374,9 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .service8 {
   background-image: url(../assets/img/diensten/Documentaire.png);
+}
+.service9 {
+  background-image: url(../assets/img/diensten/Presenteren.png);
 }
 
 .service:hover {
@@ -11655,7 +11658,7 @@ button {
 
 }
 
-.gray-gradient1, .gray-gradient2, .gray-gradient3, .gray-gradient4, .gray-gradient5, .gray-gradient6, .gray-gradient7, .gray-gradient8 {
+.gray-gradient1, .gray-gradient2, .gray-gradient3, .gray-gradient4, .gray-gradient5, .gray-gradient6, .gray-gradient7, .gray-gradient8, .gray-gradient9 {
   background-color: rgba(0, 0, 0, 25%);
 }
 
@@ -11680,6 +11683,7 @@ button {
 .services:has(.gray-gradient6:hover) .service6  {transform: scale(1.1); }
 .services:has(.gray-gradient7:hover) .service7  {transform: scale(1.1); }
 .services:has(.gray-gradient8:hover) .service8  {transform: scale(1.1); }
+.services:has(.gray-gradient9:hover) .service9  {transform: scale(1.1); }
 
 
 
@@ -11717,33 +11721,39 @@ body {
 }
 
 @keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-300px * 10))}
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-250px * 10));
+  }
 }
 
 .slider {
-	margin: auto;
-	overflow:hidden;
-	position: relative;
-	width: auto;
-	
-	.slide-track {
-		animation: scroll 20s linear infinite;
-		display: flex;
-		width: calc(300px * 20);
-    
-	}
-
-  .slide-track:hover {
-      animation-play-state: paused;
-  }
-
-	.slide {
-		width: 250px;
-    margin-right: 50px;
-    align-content: center;
-	}
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%; /* Updated for responsive width */
 }
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 20);
+  animation: scroll 20s linear infinite;
+  will-change: transform; /* Helps with smoothness, especially in Safari */
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+.slide {
+  width: 200px;
+  margin-right: 50px;
+  align-content: center;
+  flex-shrink: 0; /* Ensures slides do not shrink */
+}
+
 
 .img-fluid {
   width: 100%;
