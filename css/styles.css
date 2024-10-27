@@ -11872,3 +11872,9 @@ textarea:focus {
 .portfolio-item .content {
   flex-grow: 1;
 }
+
+#service {
+  .row {
+    min-height: 500px;
+  }
+}
