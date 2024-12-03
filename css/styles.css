@@ -10866,7 +10866,7 @@ p {
 
 
 .btn-xl {
-  padding: 1.25rem 2.5rem;
+  padding: 1rem 1.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.125rem;
   font-weight: 700;
@@ -10996,11 +10996,7 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
-#portfolio .portfolio-item {
-  max-width: 26rem;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 #portfolio .portfolio-item .portfolio-link {
   position: relative;
   display: block;
@@ -11281,13 +11277,12 @@ section#contact form#contactForm .form-group-textarea {
 }
 section#contact form#contactForm .form-group-textarea textarea {
   height: 100%;
-  min-height: 10rem;
 }
 section#contact form#contactForm p.help-block {
   margin: 0;
 }
 section#contact form#contactForm .form-control:focus {
-  border-color: #ffc800;
+  border-color: #000;
   box-shadow: none;
 }
 section#contact form#contactForm ::-webkit-input-placeholder {
@@ -11471,7 +11466,7 @@ button {
 }
 
 #service .service-text {
-  padding: 0 30px;
+  padding: 30px;
 }
 
 @media (max-width: 991px) {
@@ -11744,9 +11739,9 @@ body {
   will-change: transform; /* Helps with smoothness, especially in Safari */
 }
 
-.slide-track:hover {
+/* .slide-track:hover {
   animation-play-state: paused;
-}
+} */
 
 .slide {
   width: 200px;
@@ -11861,13 +11856,7 @@ textarea:focus {
   flex-wrap: wrap;
 }
 
-.portfolio-item {
-  flex: 1 1 calc(33.333% - 20px);
-  box-sizing: border-box;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-}
+
 
 .portfolio-item .content {
   flex-grow: 1;
@@ -11878,3 +11867,8 @@ textarea:focus {
     min-height: 500px;
   }
 }
+
+.font-size-18 {
+  font-size: 18px;
+}
+
